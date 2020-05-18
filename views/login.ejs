@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(15, 150, 155);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            padding: 14px 16px;
+            color: white;
+            background-color: teal;
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        li a:hover {
+            background-color: rgb(13, 41, 41);
+        }
+
+        header {
+            text-align: center;
+            font-style: italic;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        .google-btn {
+            text-decoration: none;
+            display: inline-block;
+            background-color: teal;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+
+        }
+
+        .fst {
+            background: #333744;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sec {
+            box-shadow: 0px 0px 17px 1px #1D1F26;
+            background: #F7F7FA;
+            padding: 24px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <%if(user){%>
+            <li><a href="/auth/logout">Logout</a></li>
+            <%}else{%>
+            <li><a href="/auth/login">Login</a></li>
+            <%}%>
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+    <div class="fst">
+        <div class="sec">
+            <header>
+                <h1>Login with....</h1>
+            </header>
+            
+                <main>
+                    <a class="google-btn" href="/auth/google">Google+</a>
+                </main>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
